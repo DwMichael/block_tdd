@@ -1,4 +1,6 @@
-class User {
+import 'package:equatable/equatable.dart';
+
+class User extends Equatable {
   const User({
     required this.id,
     required this.createdAt,
@@ -12,12 +14,5 @@ class User {
   final String avatar;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is User &&
-          other.runtimeType == runtimeType &&
-          other.id == id &&
-          other.name == name;
-
-  int get hashCode => id.hashCode ^ name.hashCode;
+  List<Object?> get props => [id];
 }
