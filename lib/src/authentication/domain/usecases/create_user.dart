@@ -27,7 +27,7 @@ class CreateUserParams extends Equatable {
 
   const CreateUserParams.empty()
       : this(
-            createdAt: '_empty.createAt',
+            createdAt: '_empty.createdAt',
             name: '_empty.name',
             avatar: '_empty.avatar');
 
